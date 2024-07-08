@@ -7,10 +7,15 @@ The project is then deployed into cloud (We used AWS as platform in this project
 Work Breakdown Structure for the project:-
 
 1.Dataset Collection
+
 2.Preprocessing of data
+
 3.Generation of Synthetic data for breakdown
+
 4.Model development
+
 5.Develop a Flask app.
+
 6.Deployment of app on Cloud ( We used AWS here )
 
 Advantages:-
