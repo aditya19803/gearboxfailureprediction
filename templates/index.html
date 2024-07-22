@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction of Gearbox Breakdown</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: url('https://www.jindalsteelpower.com/_next/image?url=https%3A%2F%2Fd2lptvt2jijg6f.cloudfront.net%2Fjspsteelpower20%2Fpage%2F1698931410chhatisgarh-banner.jpg&w=3840&q=75') no-repeat center center fixed;
+            background-size: cover;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        h1 {
+            color: white;
+        }
+
+        form {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: left;
+        }
+
+        label {
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        input[type="text"] {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin: 5px 0 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            background-color: #90ee90;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #66cc66;
+        }
+
+        .result {
+            background-color: #e7f3fe;
+            border-left: 6px solid #2196F3;
+            margin-top: 15px;
+            padding: 10px;
+            width: calc(100% - 40px);
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    
+    <h1>Gearbox Failure Prediction</h1>
+
+    <form method="post" action='/predict'>
+        <label for="masterMotorLoad">Master Motor Load</label><br>
+        <input type="text" id="masterMotorLoad" name="Master Motor Load"><br>
+
+        <label for="slaveMotorLoad">Slave Motor Load</label><br>
+        <input type="text" id="slaveMotorLoad" name="Slave Motor Load"><br>
+
+        <input type="submit" value="Predict"><br><br>
+    </form>
+
+    {% if result %}
+        <p class="result">{{ result }}</p>
+    {% endif %}
+
+</body>
+</html>
